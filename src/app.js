@@ -1,15 +1,17 @@
 import express from 'express';
+import dotenv from 'dotenv';
+
+// Cargar variables de entorno
+dotenv.config();
+
+const PORT = process.env.PORT; // tomará 5000 desde .env
 const app = express();
 
-// Middleware to parse JSON
-app.use(express.json());
-
-// Ruta de prueba
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.send("API funcionando 🚀");
 });
 
-// Iniciar el servidor
-app.listen(3000, () => {
-  console.log("Servidor en puerto 3000");
+// iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando 😉 en http://localhost:${PORT}`);
 });
