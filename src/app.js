@@ -1,5 +1,5 @@
 import express from 'express';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'; 
 import conectDB from './config/db.js';
 import tareasRoutes from './routes/tareas.routes.js';
 
